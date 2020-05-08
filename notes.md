@@ -35,6 +35,12 @@
     - index => shows all the objects of that class, all items 
     - show => a particular object, i.e. item with id 1
     - show page is a dynamic route meaning that content changes based on object we are querying
+
+## Update
+    - edit/patch total of 2 routes
+    - edit => render our edit form
+    - patch => process our edit form 
+    - dynamic => editing individual object 
     
 ## Strong params
     - whitelists attributes for mass assignment upon initialization 

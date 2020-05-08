@@ -1,4 +1,10 @@
-<% @items.each do |i| %>
-    <%= i.title %><br>
-    <%= i.description %><br>
-<% end %>
+<h1 style="text-align: center; color: green;"> All Items </h1>
+
+
+<div style="text-align: center;">
+    <% @items.each do |i| %>
+    <ol>
+        <%= i.title %> - <%= i.description %>
+    <ol>
+    <% end %>
+</div>
