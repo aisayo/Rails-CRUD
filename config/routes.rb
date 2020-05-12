@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
 
-  get '/items', to: 'items#index'
-  post '/items', to: 'items#create'
-  get '/items/new', to: 'items#new'
-  get '/items/:id', to: 'items#show', as: 'item' #dynamic 
+  get '/restaurants', to: 'restaurants#index'
+  post '/restaurants', to: 'restaurants#create'
+  get '/restaurants/new', to: 'restaurants#new'
+  get '/restaurants/:id', to: 'restaurants#show', as: 'restaurant' #dynamic 
 
-  get '/items/:id/edit', to: 'items#edit'
-  patch '/items/:id', to: 'items#update'
-  put '/items/:id', to: 'items#update'
+  get '/restaurants/:id/edit', to: 'restaurants#edit'
+  patch '/restaurants/:id', to: 'restaurants#update'
+  put '/restaurants/:id', to: 'restaurants#update'
 
 
-  # resources :items
+  # resources :restaurants
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 

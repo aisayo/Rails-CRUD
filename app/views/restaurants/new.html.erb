@@ -1,0 +1,29 @@
+<h1 style="text-align: center; color: green;"> Create a restaurant! </h1>
+
+
+<% if @restaurant.errors.any? %>
+    <% @restaurant.errors.full_messages.each do |mess| %>
+            <li style="color: red"><%= mess %></li>
+    <% end %>
+<% end %>
+
+
+<div style="text-align: center;">
+    <%= form_for @restaurant do |f|%>
+
+    <div class="field">
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%= f.submit 'Create restaurant'%>
+    <% end %>
+</div>
+
+
+
+
+

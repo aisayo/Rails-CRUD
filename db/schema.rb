@@ -12,9 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2020_04_28_005625) do
 
-  create_table "items", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
   end
 
 end
