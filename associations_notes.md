@@ -1,5 +1,19 @@
 # Associations
 
+## types of associations
+
+- many to one - belongs_to, has many relationship
+- one to one - belongs_to, has_one relationship
+- many to many - join table, belongs two different objects, has_many, through
+
+- defined in the model
+
+
+- need a table 
+- model class
+- routes
+- views
+
 ## Model: Restaurant
 
 - attributes: name

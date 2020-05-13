@@ -9,11 +9,23 @@
 
 
 <div style="text-align: center;">
+
     <%= form_for @restaurant do |f|%>
 
     <div class="field">
     <%= f.label :name%>
     <%= f.text_field :name%>
+
+    Pick a category 
+
+    <%= f.text_field :category_name, list: "categories_autocomplete" %>
+
+    <datalist id="categories_autocomplete">
+        <% @categories.each do |c| %>
+            <option value="<%= c.name %>">
+        <% end %>
+    </datalist>
+
     </div>
     <br>
     <br>
@@ -21,7 +33,31 @@
     <br>
     <%= f.submit 'Create restaurant'%>
     <% end %>
+
+
+    <%
+=begin%>
+ <%= form_for @restaurant do |f|%>
+
+    <div class="field">
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+
+    Pick a category 
+
+    <%= f.collection_select :category_name, @categories, :name, :name, prompt: "Please Select One" %>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%= f.submit 'Create restaurant'%>
+    <% end %> 
+<%
+=end%>
 </div>
+
+
 
 
 

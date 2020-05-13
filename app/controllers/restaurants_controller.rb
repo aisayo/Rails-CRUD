@@ -4,6 +4,7 @@ class RestaurantsController < ApplicationController
 #Create
     def new
         @restaurant = Restaurant.new 
+        @categories = Category.all
     end 
 
     def create
@@ -41,7 +42,7 @@ class RestaurantsController < ApplicationController
 
     #strong_params 
     def restaurant_params
-        params.require(:restaurant).permit(:name, :description)
+        params.require(:restaurant).permit(:name, :category_name)
     end 
 
 end
